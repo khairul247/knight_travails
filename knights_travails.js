@@ -78,7 +78,7 @@ const prettyPrint = (node, prefix = "", isLast = true) => {
 
 const printPath = (path) => {
     const moves = path.length;
-    console.log(`Shortest path in ${moves} moves:`);
+    console.log(`Shortest path in ${moves-1} moves:`);
     path.forEach(coordinates => {
         console.log(`[${coordinates[0]},${coordinates[1]}]`);
     })
@@ -86,8 +86,8 @@ const printPath = (path) => {
 
 
 // Example usage
-const startCoordinates = [0, 0];
-const targetCoordinates = [7, 7];
+const startCoordinates = [3, 3];
+const targetCoordinates = [4, 3];
 const {node, path} = createNode(startCoordinates, targetCoordinates);
 
 // Print the tree
